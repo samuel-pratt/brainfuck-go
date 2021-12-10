@@ -10,5 +10,5 @@ Requires Go to build.
 git clone https://github.com/samuel-pratt/brainfuck-go.git
 cd brainfuck-go
 go build
-./brainfuck-go hello_world.go
+./brainfuck-go hello_world.bf
 ```

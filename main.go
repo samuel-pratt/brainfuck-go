@@ -9,7 +9,7 @@ import (
 
 func main() {
 	var arr [30000]byte
-	var curr byte = 0
+	var curr int = 0
 	var args = os.Args[1:]
 
 	if len(args) != 1 {

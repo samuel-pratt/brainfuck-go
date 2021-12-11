@@ -23,8 +23,16 @@ func main() {
 		return
 	}
 
+	var instructions []byte
+
 	for i := 0; i < len(file); i++ {
-		switch file[i] {
+		if file[i] == 43 || file[i] == 45 || file[i] == 44 || file[i] == 46 || file[i] == 91 || file[i] == 93 || file[i] == 60 || file[i] == 62 {
+			instructions = append(instructions, file[i])
+		}
+	}
+
+	for i := 0; i < len(instructions); i++ {
+		switch instructions[i] {
 		// +
 		case 43:
 			arr[curr] = arr[curr] + 1
@@ -48,19 +56,14 @@ func main() {
 		// [
 		case 91:
 			if arr[curr] == 0 {
-				var skips int = 0
-				for true {
+				var skips int = 1
+				for skips != 0 {
 					i = i + 1
-					if file[i] == 91 {
+					if instructions[i] == 91 {
 						skips = skips + 1
 					}
-					if file[i] == 93 {
-						if skips == 0 {
-							break
-						} else {
-							skips = skips - 1
-						}
-
+					if instructions[i] == 93 {
+						skips = skips - 1
 					}
 				}
 			}
@@ -68,19 +71,14 @@ func main() {
 		// ]
 		case 93:
 			if arr[curr] != 0 {
-				var skips int = 0
-				for true {
+				var skips int = 1
+				for skips != 0 {
 					i = i - 1
-					if file[i] == 93 {
+					if instructions[i] == 93 {
 						skips = skips + 1
 					}
-					if file[i] == 91 {
-						if skips == 0 {
-							break
-						} else {
-							skips = skips - 1
-						}
-
+					if instructions[i] == 91 {
+						skips = skips - 1
 					}
 				}
 			}

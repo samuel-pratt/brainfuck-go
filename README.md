@@ -2,7 +2,7 @@
 
 A [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck) interpreter written in Go.
 
-#### How Brainfuck works
+## How Brainfuck works
 
 Brainfuck is an esoteric programming language designed to have the simplest compiler possible. Beginning with a byte array with a length of 30 thousand, and a pointer to the first element, the programmer can perform 8 actions:
 
@@ -22,7 +22,7 @@ Brainfuck is an esoteric programming language designed to have the simplest comp
 
 `]` - if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching [ command.
 
-### Running locally
+## Running locally
 
 Requires Go to build.
 
@@ -33,7 +33,7 @@ go build
 ./brainfuck-go hello_world.bf
 ```
 
-#### Thanks to
+## Thanks to
 
 Fireship, who's [video](https://www.youtube.com/watch?v=hdHjjBS4cs8) introduced my to Brainfuck.
 

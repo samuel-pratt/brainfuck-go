@@ -2,6 +2,10 @@
 
 A [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck) interpreter written in Go.
 
+#### How Brainfuck works
+
+Brainfuck is an esoteric programming language designed to have the simplest compiler possible. Beginning with a byte array with a length of 30 thousand, and a pointer to the first element, the programmer can perform 8 actions:
+
 `>` - increment the data pointer (to point to the next cell to the right).
 
 `<` - decrement the data pointer (to point to the next cell to the left).
@@ -28,3 +32,9 @@ cd brainfuck-go
 go build
 ./brainfuck-go hello_world.bf
 ```
+
+#### Thanks to
+
+Fireship, who's [video](https://www.youtube.com/watch?v=hdHjjBS4cs8) introduced my to Brainfuck.
+
+Steve Kemp, who's [article](https://blog.steve.fi/writing_a_brainfuck_compiler_.html) was a huge help in writing the interpreter (and where I got the steps above from).

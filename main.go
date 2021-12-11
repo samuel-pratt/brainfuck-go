@@ -23,7 +23,6 @@ func main() {
 		return
 	}
 
-	// + - , . [ ] < >
 	for i := 0; i < len(file); i++ {
 		switch file[i] {
 		// +
